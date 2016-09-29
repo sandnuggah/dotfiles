@@ -1,0 +1,95 @@
+#!/bin/sh
+
+trap 'ret=$?; test $ret -ne 0; exit $ret' EXIT
+sudo -v
+
+if ! command -v brew >/dev/null; then
+  /usr/bin/ruby -e "$(
+    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install
+  )"
+
+  brew bundle --file=- <<EOF
+  tap 'homebrew/core'
+  tap 'homebrew/bundle'
+  tap 'caskroom/cask'
+  tap 'caskroom/fonts'
+  tap 'caskroom/versions'
+EOF
+fi
+
+brew bundle --file=- <<EOF
+brew 'coreutils'
+brew 'curl'
+brew 'findutils'
+brew 'fish'
+brew 'git'
+brew 'git-flow'
+brew 'httpie'
+brew 'keybase'
+brew 'mas'
+brew 'mpv', args: ['with-bundle']
+brew 'node'
+brew 'openssl'
+brew 'ssh-copy-id'
+brew 'stow'
+brew 'tmux'
+brew 'wget'
+brew 'youtube-dl'
+
+cask 'alfred'
+cask 'atom'
+cask 'docker'
+cask 'dropbox'
+cask 'firefox'
+cask 'flux'
+cask 'font-fira-code'
+cask 'google-chrome'
+cask 'imagealpha'
+cask 'imageoptim'
+cask 'iterm2'
+cask 'quicklook-json'
+cask 'skadi'
+cask 'slack'
+cask 'the-unarchiver'
+cask 'torbrowser'
+cask 'transmission'
+
+mas 'Xcode', id: 497799835
+mas 'Pixelmator', id: 407963104
+mas 'Transmit', id: 403388562
+mas 'Radium ~ Perfect Internet Radio', id: 597611879
+EOF
+
+if ! fgrep -q '/usr/local/bin/fish' /etc/shells; then
+  echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
+fi
+
+if [[ ! $SHELL = '/usr/local/bin/fish' ]]; then
+  chsh -s /usr/local/bin/fish
+fi
+
+if brew cask list | grep atom; then
+  /Applications/Atom.app/Contents/Resources/app/apm/bin/apm install \
+    Parinfer \
+    docblockr \
+    duotone-dark-syntax \
+    duotone-light-syntax \
+    file-icons \
+    hard-wrap \
+    ink \
+    jshint \
+    language-babel \
+    lines \
+    linter \
+    linter-js-standard \
+    lisp-paredit \
+    pigments \
+    pretty-json \
+    proto-repl \
+    sort-lines \
+    standard-formatter \
+    standardjs-snippets \
+    tool-bar
+fi
+
+echo 'All done! Now go `stow {package}` some configs.'

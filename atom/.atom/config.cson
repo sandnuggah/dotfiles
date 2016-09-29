@@ -1,0 +1,38 @@
+"*":
+  core:
+    excludeVcsIgnoredPaths: false
+    ignoredNames: [
+      ".DS_STORE"
+      "node_modules"
+      ".git"
+    ]
+    themes: [
+      "one-dark-ui"
+      "duotone-dark-syntax"
+    ]
+  editor:
+    fontFamily: "FiraCode-Retina"
+  "exception-reporting":
+    userId: "5937462e-3bf6-1d5b-b64f-436e639b9da2"
+  "file-icons":
+    onChanges: true
+    tabPaneIcon: false
+  jshint:
+    onlyConfig: true
+  linter:
+    showErrorPanel: false
+    showErrorTabFile: false
+    showErrorTabProject: false
+  "linter-js-standard":
+    checkStyleDevDependencies: true
+    honorStyleSettings: true
+  "proto-repl":
+    showInlineResults: false
+  "tool-bar":
+    position: "Left"
+    visible: false
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
