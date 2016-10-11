@@ -12,6 +12,8 @@
     ]
   editor:
     fontFamily: "FiraCode-Retina"
+    softWrap: true
+    softWrapAtPreferredLineLength: true
   "exception-reporting":
     userId: "5937462e-3bf6-1d5b-b64f-436e639b9da2"
   "file-icons":
@@ -26,6 +28,9 @@
   "linter-js-standard":
     checkStyleDevDependencies: true
     honorStyleSettings: true
+  "lisp-paredit":
+    strict: false
+  pigments: {}
   "proto-repl":
     showInlineResults: false
   "tool-bar":
