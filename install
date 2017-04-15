@@ -25,7 +25,6 @@ brew 'fish'
 brew 'git'
 brew 'git-flow'
 brew 'httpie'
-brew 'keybase'
 brew 'mas'
 brew 'mpv', args: ['with-bundle']
 brew 'node'
