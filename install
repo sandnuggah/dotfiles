@@ -70,26 +70,21 @@ fi
 
 if brew cask list | grep atom; then
   /Applications/Atom.app/Contents/Resources/app/apm/bin/apm install \
-    Parinfer \
     docblockr \
     duotone-dark-syntax \
     duotone-light-syntax \
     file-icons \
     hard-wrap \
-    ink \
     jshint \
     language-babel \
     lines \
     linter \
     linter-js-standard \
-    lisp-paredit \
     pigments \
     pretty-json \
-    proto-repl \
     sort-lines \
     standard-formatter \
-    standardjs-snippets \
-    tool-bar
+    standardjs-snippets
 fi
 
 echo 'All done! Now go `stow {package}` some configs.'
