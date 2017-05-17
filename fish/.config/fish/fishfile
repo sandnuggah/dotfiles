@@ -1,4 +1,5 @@
 fisherman/docker-completion
+decors/fish-docker-machine
 # https://gist.github.com/sandnuggah/199b78f9ca70b81d01fc9a879ad3a2e4
 oh-my-fish/plugin-git-flow
 fisherman/grc
