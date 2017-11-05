@@ -29,11 +29,3 @@
   'ctrl-tab'                : 'pane:show-next-item'
   'ctrl-shift-tab ^ctrl'    : 'unset!'
   'ctrl-shift-tab'          : 'pane:show-previous-item'
-
-'atom-text-editor[data-grammar="source clojure"]':
-  'cmd-shift-g'             : 'unset!'
-  'cmd-shift-g'             : 'proto-repl:execute-top-block'
-  'cmd-shift-alt-g'         : 'unset!'
-  'cmd-shift-alt-g'         : 'proto-repl:execute-block'
-  'cmd-shift-k'             : 'unset!'
-  'cmd-shift-k'             : 'proto-repl:clear-repl'
