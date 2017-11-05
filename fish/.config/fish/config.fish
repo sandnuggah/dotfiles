@@ -5,6 +5,7 @@ set -x PATH /usr/sbin $PATH
 set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
 set -x PATH ~/.local/bin $PATH
+set -x PATH /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin $PATH
 
 set -x EDITOR atom
 
