@@ -26,10 +26,7 @@
       toggleHovers: false
   jshint:
     onlyConfig: true
-  linter:
-    showErrorPanel: false
-    showErrorTabFile: false
-    showErrorTabProject: false
+  linter: {}
   "linter-js-standard":
     checkStyleDevDependencies: true
     honorStyleSettings: true
