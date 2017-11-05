@@ -74,6 +74,7 @@ if brew cask list | grep atom; then
     linter-js-standard \
     pigments \
     pretty-json \
+    pristine-ui \
     sort-lines
 fi
 

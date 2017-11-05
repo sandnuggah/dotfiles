@@ -8,7 +8,7 @@
     ]
     telemetryConsent: "no"
     themes: [
-      "one-dark-ui"
+      "pristine-ui"
       "duotone-dark-syntax"
     ]
   editor:
