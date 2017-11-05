@@ -6,7 +6,7 @@ set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
 
 set -x EDITOR atom
-set -x HOMEBREW_GITHUB_API_TOKEN 1a5834b1a987e759d6980c0b518cf6a608207863
+set -x HOMEBREW_GITHUB_API_TOKEN <github-token>
 
 set -e fish_greeting
 
