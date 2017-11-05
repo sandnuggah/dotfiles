@@ -19,6 +19,10 @@
   "file-icons":
     onChanges: true
     tabPaneIcon: false
+  "genesis-ui":
+    distractionFree: {}
+    treeView:
+      toggleHovers: false
   jshint:
     onlyConfig: true
   linter:
@@ -31,6 +35,8 @@
   "lisp-paredit":
     strict: false
   pigments: {}
+  "pristine-ui":
+    hideDockButtons: true
   "proto-repl":
     showInlineResults: false
   "tool-bar":
