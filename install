@@ -20,6 +20,7 @@ fi
 brew bundle --file=- <<EOF
 brew 'coreutils'
 brew 'curl'
+brew 'direnv'
 brew 'findutils'
 brew 'fish'
 brew 'git-flow'
@@ -76,4 +77,4 @@ if brew cask list | grep atom; then
     sort-lines
 fi
 
-echo 'All done! Now go `stow {package}` some configs.'
+echo 'Install complete.'
