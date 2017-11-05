@@ -22,12 +22,11 @@ brew 'coreutils'
 brew 'curl'
 brew 'findutils'
 brew 'fish'
-brew 'git'
 brew 'git-flow'
+brew 'git'
 brew 'httpie'
 brew 'mas'
 brew 'mpv', args: ['with-bundle']
-brew 'node'
 brew 'openssl'
 brew 'ssh-copy-id'
 brew 'stow'
@@ -39,17 +38,13 @@ cask 'alfred'
 cask 'atom'
 cask 'docker'
 cask 'dropbox'
-cask 'firefox'
 cask 'font-fira-code'
 cask 'google-chrome'
-cask 'imagealpha'
-cask 'imageoptim'
 cask 'iterm2'
 cask 'quicklook-json'
 cask 'skadi'
 cask 'slack'
 cask 'the-unarchiver'
-cask 'torbrowser'
 cask 'transmission'
 
 mas 'Xcode', id: 497799835
@@ -68,21 +63,17 @@ fi
 
 if brew cask list | grep atom; then
   /Applications/Atom.app/Contents/Resources/app/apm/bin/apm install \
-    docblockr \
     duotone-dark-syntax \
     duotone-light-syntax \
     file-icons \
     hard-wrap \
-    jshint \
     language-babel \
     lines \
     linter \
     linter-js-standard \
     pigments \
     pretty-json \
-    sort-lines \
-    standard-formatter \
-    standardjs-snippets
+    sort-lines
 fi
 
 echo 'All done! Now go `stow {package}` some configs.'
