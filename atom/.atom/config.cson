@@ -6,6 +6,7 @@
       "node_modules"
       ".git"
     ]
+    telemetryConsent: "no"
     themes: [
       "one-dark-ui"
       "duotone-dark-syntax"
