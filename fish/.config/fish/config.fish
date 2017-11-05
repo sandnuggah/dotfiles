@@ -4,8 +4,6 @@ set -x PATH /usr/bin $PATH
 set -x PATH /usr/sbin $PATH
 set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
-set -x PATH ~/.local/bin $PATH
-set -x PATH /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin $PATH
 
 set -x EDITOR atom
 set -x HOMEBREW_GITHUB_API_TOKEN 1a5834b1a987e759d6980c0b518cf6a608207863
