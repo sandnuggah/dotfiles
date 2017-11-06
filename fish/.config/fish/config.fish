@@ -8,7 +8,6 @@ set -x PATH /usr/local/sbin $PATH
 set -x EDITOR atom
 set -x HOMEBREW_GITHUB_API_TOKEN <github-token>
 
-set -e fish_greeting
 
 alias gs='git status'
 alias gl='git log'
