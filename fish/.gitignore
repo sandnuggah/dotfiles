@@ -1,4 +1,2 @@
-.config/fish/fishd.*
-.config/fish/conf.d
 .config/fish/completions
-.config/fish/functions/*
+.config/fish/functions/fundle.fish
