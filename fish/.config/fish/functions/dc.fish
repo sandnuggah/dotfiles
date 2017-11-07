@@ -1,3 +1,3 @@
 function dc --description 'alias for docker-compose'
-	docker-compose  $argv;
+	docker-compose $argv;
 end
