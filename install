@@ -22,39 +22,51 @@ EOF
 fi
 
 brew bundle --file=- <<EOF
-brew 'coreutils'
-brew 'curl'
-brew 'direnv'
-brew 'findutils'
-brew 'fish'
-brew 'git-flow'
-brew 'git'
-brew 'httpie'
-brew 'mas'
-brew 'mpv', args: ['with-bundle']
-brew 'openssl'
-brew 'ssh-copy-id'
-brew 'stow'
-brew 'tmux'
-brew 'wget'
-brew 'youtube-dl'
-
-cask 'alfred'
-cask 'atom'
-cask 'docker'
-cask 'dropbox'
-cask 'font-fira-code'
-cask 'google-chrome'
-cask 'iterm2'
-cask 'quicklook-json'
-cask 'skadi'
-cask 'slack'
-cask 'the-unarchiver'
-cask 'transmission'
-
-mas 'Pixelmator', id: 407963104
-mas 'Transmit', id: 403388562
-mas 'Radium ~ Perfect Internet Radio', id: 597611879
+  tap 'homebrew/core'
+  tap 'homebrew/bundle'
+  tap 'caskroom/fonts'
+  tap 'caskroom/versions'
+  tap 'caskroom/cask'
+  brew 'cmatrix'
+  brew 'coreutils'
+  brew 'curl'
+  brew 'direnv'
+  brew 'git'
+  brew 'findutils'
+  brew 'fish'
+  brew 'git-flow'
+  brew 'htop'
+  brew 'openssl'
+  brew 'httpie'
+  brew 'mas'
+  brew 'reattach-to-user-namespace'
+  brew 'sl'
+  brew 'ssh-copy-id'
+  brew 'stow'
+  brew 'tmux'
+  brew 'wget'
+  cask 'alfred'
+  cask 'atom'
+  cask 'docker'
+  cask 'dropbox'
+  cask 'google-chrome'
+  cask 'iina'
+  cask 'qlcolorcode'
+  cask 'qlmarkdown'
+  cask 'qlstephen'
+  cask 'qlvideo'
+  cask 'quicklook-csv'
+  cask 'quicklook-json'
+  cask 'skadi'
+  cask 'the-unarchiver'
+  cask 'transmission'
+  cask 'webpquicklook'
+  cask 'caskroom/fonts/font-fira-code'
+  mas '1Blocker', id: 1107421413
+  mas 'Pixelmator', id: 407963104
+  mas 'Radium', id: 597611879
+  mas 'Textual', id: 896450579
+  mas 'Transmit', id: 403388562
 EOF
 
 if ! fgrep -q '/usr/local/bin/fish' /etc/shells; then
