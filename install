@@ -3,6 +3,10 @@
 trap 'ret=$?; test $ret -ne 0; exit $ret' EXIT
 sudo -v
 
+if ! command -v gcc >/dev/null; then
+  xcode-select --install
+fi
+
 if ! command -v brew >/dev/null; then
   /usr/bin/ruby -e "$(
     curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install
@@ -48,7 +52,6 @@ cask 'slack'
 cask 'the-unarchiver'
 cask 'transmission'
 
-mas 'Xcode', id: 497799835
 mas 'Pixelmator', id: 407963104
 mas 'Transmit', id: 403388562
 mas 'Radium ~ Perfect Internet Radio', id: 597611879
