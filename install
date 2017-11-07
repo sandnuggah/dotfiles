@@ -8,17 +8,7 @@ if ! command -v xcode-select -p >/dev/null; then
 fi
 
 if ! command -v brew >/dev/null; then
-  /usr/bin/ruby -e "$(
-    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install
-  )"
-
-  brew bundle --file=- <<EOF
-  tap 'homebrew/core'
-  tap 'homebrew/bundle'
-  tap 'caskroom/cask'
-  tap 'caskroom/fonts'
-  tap 'caskroom/versions'
-EOF
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 brew bundle --file=- <<EOF
