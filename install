@@ -3,7 +3,7 @@
 trap 'ret=$?; test $ret -ne 0; exit $ret' EXIT
 sudo -v
 
-if ! command -v gcc >/dev/null; then
+if ! command -v xcode-select -p >/dev/null; then
   xcode-select --install
 fi
 
