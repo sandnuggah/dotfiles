@@ -3,6 +3,7 @@
 trap 'ret=$?; test $ret -ne 0; exit $ret' EXIT
 sudo -v
 
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 if ! command -v xcode-select -p >/dev/null; then
   xcode-select --install
 fi
