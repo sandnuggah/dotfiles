@@ -4,6 +4,8 @@
 [![Socialism](https://img.shields.io/badge/socialism-★-ff0000.svg)](https://en.wikipedia.org/wiki/Socialism)
 ![Ideology passing](https://img.shields.io/badge/ideology-passing-brightgreen.svg)
 
+A sane macOS setup for an insane people.
+
 ## Installation
 
 ```sh
