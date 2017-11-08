@@ -1,12 +1,17 @@
 #!/bin/sh
 
+# Ask for the administrator password upfront
 sudo -v
 
+# Update existing `sudo` time stamp until `install` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# Install Xcode command line tools
 if ! command -v xcode-select -p >/dev/null; then
   xcode-select --install
 fi
 
+# Install homebrew
 if ! command -v brew >/dev/null; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
@@ -59,6 +64,7 @@ brew bundle --file=- <<EOF
   mas 'Transmit', id: 403388562
 EOF
 
+# Set fish as the default shell
 if ! fgrep -q '/usr/local/bin/fish' /etc/shells; then
   echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
 fi
@@ -67,6 +73,7 @@ if [[ ! $SHELL = '/usr/local/bin/fish' ]]; then
   chsh -s /usr/local/bin/fish
 fi
 
+# Install Atom packages
 if brew cask list | grep atom; then
   /Applications/Atom.app/Contents/Resources/app/apm/bin/apm install \
     duotone-dark-syntax \
