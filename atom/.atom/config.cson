@@ -1,4 +1,8 @@
 "*":
+  build:
+    hidePanelHeading: true
+    overrideThemeColors: false
+    panelVisibility: "Show on Error"
   core:
     excludeVcsIgnoredPaths: false
     ignoredNames: [
