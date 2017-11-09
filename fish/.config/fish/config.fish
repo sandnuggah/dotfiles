@@ -11,6 +11,12 @@ set -x PATH /usr/sbin $PATH
 set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
 set -x EDITOR atom
+
+# Load secrets (like GITHUB_API_TOKEN)
 source ~/.config/fish/secrets.fish
+
+# Load gcloud sdk paths
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+
+# Load direnv
 eval (direnv hook fish)
