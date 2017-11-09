@@ -11,6 +11,8 @@ set -x PATH /usr/bin $PATH
 set -x PATH /usr/sbin $PATH
 set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
+
+# Setup editor
 set -x EDITOR atom
 
 # Load secrets (like GITHUB_API_TOKEN)
