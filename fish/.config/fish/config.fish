@@ -12,6 +12,11 @@ set -x PATH /usr/bin $PATH
 set -x PATH /usr/sbin $PATH
 set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
+# Abbreviations
+abbr -a dc docker-compose
+abbr -a gs git status
+abbr -a gd git diff
+abbr -a gl git log
 
 # Setup editor
 set -x EDITOR atom
