@@ -3,6 +3,7 @@ if not functions -q fundle; eval (curl -sfL https://git.io/fundle-install); end
 
 fundle plugin 'tuvistavie/fish-kubectl'
 fundle plugin 'tuvistavie/fish-fastdir'
+fundle plugin 'barnybug-archive/docker-fish-completion'
 fundle init
 
 # Setup paths
