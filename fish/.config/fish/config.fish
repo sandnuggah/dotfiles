@@ -6,7 +6,7 @@ fundle plugin 'tuvistavie/fish-fastdir'
 fundle plugin 'barnybug-archive/docker-fish-completion'
 fundle init
 
-# Setup paths
+# Paths
 set -x PATH /bin $PATH
 set -x PATH /sbin $PATH
 set -x PATH /usr/bin $PATH
@@ -20,7 +20,7 @@ abbr -a gs 'git status'
 abbr -a gd 'git diff'
 abbr -a gl 'git log'
 
-# Setup editor
+# Editor
 set -x EDITOR atom
 
 # Load secrets (like GITHUB_API_TOKEN)
