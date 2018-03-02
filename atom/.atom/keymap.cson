@@ -29,3 +29,4 @@
   'ctrl-tab'                : 'pane:show-next-item'
   'ctrl-shift-tab ^ctrl'    : 'unset!'
   'ctrl-shift-tab'          : 'pane:show-previous-item'
+  'cmd-k cmd-g'             : 'github:toggle-git-tab'
