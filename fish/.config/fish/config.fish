@@ -19,6 +19,7 @@ abbr -a dc 'docker-compose'
 abbr -a gs 'git status'
 abbr -a gd 'git diff'
 abbr -a gl 'git log'
+abbr -a dmc 'docker-machine-connect'
 
 # Editor
 set -x EDITOR atom
