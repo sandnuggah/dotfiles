@@ -32,3 +32,7 @@ source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.in
 
 # Load direnv
 eval (direnv hook fish)
+
+# `bat` defaults
+set -x BAT_THEME 'GitHub'
+set -x BAT_STYLE 'plain,changes'

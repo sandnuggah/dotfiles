@@ -22,6 +22,7 @@ brew bundle --file=- <<EOF
   tap 'caskroom/fonts'
   tap 'caskroom/versions'
   tap 'caskroom/cask'
+  brew 'bat'
   brew 'cmatrix'
   brew 'coreutils'
   brew 'curl'
