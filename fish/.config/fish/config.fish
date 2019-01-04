@@ -14,6 +14,9 @@ set -x PATH /usr/sbin $PATH
 set -x PATH /usr/local/bin $PATH
 
 # Abbreviations
+abbr -a l 'ls'
+abbr -a ll 'ls -l'
+abbr -a la 'ls -la'
 abbr -a dc 'docker-compose'
 abbr -a gs 'git status'
 abbr -a gd 'git diff'
