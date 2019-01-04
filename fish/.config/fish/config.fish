@@ -38,4 +38,4 @@ eval (direnv hook fish)
 
 # `bat` defaults
 set -x BAT_THEME 'GitHub'
-set -x BAT_STYLE 'plain,changes'
+set -x BAT_STYLE 'plain'
