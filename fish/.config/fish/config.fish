@@ -22,7 +22,7 @@ abbr -a gs 'git status'
 abbr -a gd 'git diff'
 abbr -a gl 'git log'
 abbr -a dmc 'docker-machine-connect'
-abbr -a brewup 'brew update; and brew upgrade; and brew cleanup; and brew prune;'
+abbr -a brewup 'brew update; and brew upgrade; and brew cleanup;'
 
 # Editor
 set -x EDITOR atom
