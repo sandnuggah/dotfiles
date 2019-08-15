@@ -13,6 +13,9 @@ set -x PATH /usr/bin $PATH
 set -x PATH /usr/sbin $PATH
 set -x PATH /usr/local/bin $PATH
 
+# Aliases
+alias ls 'exa'
+
 # Abbreviations
 abbr -a l 'ls'
 abbr -a ll 'ls -l'
