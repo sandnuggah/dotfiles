@@ -65,11 +65,12 @@ brew bundle --file=- <<EOF
   mas 'Transmit', id: 403388562
 EOF
 
-# Set fish as the default shell
+# Add fish to shells
 if ! fgrep -q '/usr/local/bin/fish' /etc/shells; then
   echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
 fi
 
+# Set fish as the default shell
 if [[ ! $SHELL = '/usr/local/bin/fish' ]]; then
   chsh -s /usr/local/bin/fish
 fi
@@ -91,4 +92,4 @@ if brew cask list | grep atom; then
     sort-lines
 fi
 
-echo 'Install complete.'
+echo 'Install complete'
