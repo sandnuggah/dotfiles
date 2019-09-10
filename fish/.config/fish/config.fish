@@ -44,3 +44,6 @@ set -x BAT_STYLE 'plain'
 
 # nodenv
 status --is-interactive; and source (nodenv init -|psub)
+
+# starship
+eval (starship init fish)

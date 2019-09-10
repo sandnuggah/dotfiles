@@ -1,0 +1,25 @@
+[character]
+symbol = "λ ->"
+error_symbol = "λ ~>"
+use_symbol_for_status = true
+
+[directory]
+fish_style_pwd_dir_length = 3
+
+[line_break]
+disabled = true
+
+[package]
+symbol = "pkg "
+disabled = true
+
+[nodejs]
+symbol = "N "
+disabled = true
+
+[python]
+symbol = "P "
+disabled = true
+
+[git_status]
+deleted = "x"
