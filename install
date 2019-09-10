@@ -42,8 +42,10 @@ brew bundle --file=- <<EOF
   brew 'stow'
   brew 'tmux'
   brew 'wget'
+
   cask 'alfred'
   cask 'atom'
+  cask 'caskroom/fonts/font-fira-code'
   cask 'docker'
   cask 'dropbox'
   cask 'google-chrome'
@@ -54,11 +56,12 @@ brew bundle --file=- <<EOF
   cask 'qlvideo'
   cask 'quicklook-csv'
   cask 'quicklook-json'
+  cask 'signal'
   cask 'skadi'
   cask 'the-unarchiver'
   cask 'transmission'
   cask 'webpquicklook'
-  cask 'caskroom/fonts/font-fira-code'
+
   mas '1Blocker', id: 1107421413
   mas 'Pixelmator', id: 407963104
   mas 'Radium', id: 597611879
