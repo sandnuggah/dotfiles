@@ -12,9 +12,11 @@ set -x PATH /sbin $PATH
 set -x PATH /usr/bin $PATH
 set -x PATH /usr/sbin $PATH
 set -x PATH /usr/local/bin $PATH
+set -x PATH /usr/local/sbin $PATH
 
 # Aliases
 alias ls 'exa'
+alias tmux 'env TERM=xterm tmux'
 
 # Abbreviations
 abbr -a l 'ls'
@@ -27,7 +29,7 @@ abbr -a gl 'git log'
 abbr -a brewup 'brew update; and brew upgrade; and brew cleanup;'
 
 # Editor
-set -x EDITOR atom
+set -x EDITOR code
 
 # Load secrets (like GITHUB_API_TOKEN)
 source ~/.config/fish/secrets.fish
