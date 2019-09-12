@@ -44,12 +44,11 @@ brew bundle --file=- <<EOF
   brew 'wget'
 
   cask 'alfred'
-  cask 'atom'
   cask 'caskroom/fonts/font-fira-code'
   cask 'docker'
-  cask 'dropbox'
   cask 'google-chrome'
   cask 'iina'
+  cask 'kitty'
   cask 'qlcolorcode'
   cask 'qlmarkdown'
   cask 'qlstephen'
@@ -57,7 +56,6 @@ brew bundle --file=- <<EOF
   cask 'quicklook-csv'
   cask 'quicklook-json'
   cask 'signal'
-  cask 'skadi'
   cask 'the-unarchiver'
   cask 'transmission'
   cask 'webpquicklook'
@@ -65,8 +63,11 @@ brew bundle --file=- <<EOF
   mas '1Blocker', id: 1107421413
   mas 'Pixelmator', id: 407963104
   mas 'Radium', id: 597611879
-  mas 'Textual', id: 896450579
+  mas 'Textual IRC Client', id: 896450579
+  mas 'ToothFairy', id: 1191449274
   mas 'Transmit', id: 403388562
+  mas 'Xcode', id: 497799835
+  mas 'Xee³', id: 639764244
 EOF
 
 # Add fish to shells
