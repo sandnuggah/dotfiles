@@ -80,21 +80,4 @@ if [[ ! $SHELL = '/usr/local/bin/fish' ]]; then
   chsh -s /usr/local/bin/fish
 fi
 
-# Install Atom packages
-if brew cask list | grep atom; then
-  /Applications/Atom.app/Contents/Resources/app/apm/bin/apm install \
-    duotone-dark-syntax \
-    duotone-light-syntax \
-    file-icons \
-    hard-wrap \
-    language-babel \
-    lines \
-    linter \
-    linter-js-standard \
-    pigments \
-    pretty-json \
-    pristine-ui \
-    sort-lines
-fi
-
 echo 'Install complete'
