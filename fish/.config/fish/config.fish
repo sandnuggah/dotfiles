@@ -14,6 +14,16 @@ set -x PATH /usr/sbin $PATH
 set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
 
+# env
+set -x EDITOR code
+set -x BAT_THEME 'GitHub'
+set -x BAT_STYLE 'plain'
+set -x GIT_PAGER 'bat'
+set -x MANPAGER "sh -c 'col -b | bat -l man -p'"
+
+# Secrets (like GITHUB_API_TOKEN)
+source ~/.config/fish/secrets.fish
+
 # Aliases
 alias ls 'exa'
 alias tmux 'env TERM=xterm tmux'
@@ -28,21 +38,11 @@ abbr -a gd 'git diff'
 abbr -a gl 'git log'
 abbr -a brewup 'brew update; and brew upgrade; and brew cleanup;'
 
-# Editor
-set -x EDITOR code
-
-# Load secrets (like GITHUB_API_TOKEN)
-source ~/.config/fish/secrets.fish
-
 # Load gcloud sdk paths
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 
 # Load direnv
 eval (direnv hook fish)
-
-# `bat` defaults
-set -x BAT_THEME 'GitHub'
-set -x BAT_STYLE 'plain'
 
 # nodenv
 status --is-interactive; and source (nodenv init -|psub)
