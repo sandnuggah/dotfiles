@@ -26,7 +26,7 @@ source ~/.config/fish/secrets.fish
 
 # Aliases
 alias ls 'exa'
-alias tmux 'env TERM=xterm tmux'
+alias tmux 'env TERM=xterm-256color tmux'
 
 # Abbreviations
 abbr -a l 'ls'
@@ -37,9 +37,6 @@ abbr -a gs 'git status'
 abbr -a gd 'git diff'
 abbr -a gl 'git log'
 abbr -a brewup 'brew update; and brew upgrade; and brew cleanup;'
-
-# Load gcloud sdk paths
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 
 # Load direnv
 eval (direnv hook fish)
