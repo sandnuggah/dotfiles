@@ -28,6 +28,7 @@ brew bundle --file=- <<EOF
   brew 'coreutils'
   brew 'curl'
   brew 'direnv'
+  brew 'fd'
   brew 'findutils'
   brew 'fish'
   brew 'git-flow'
