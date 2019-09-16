@@ -25,3 +25,7 @@ disabled = true
 
 [git_status]
 deleted = "x"
+
+[jobs]
+symbol = "+ "
+threshold = 0
