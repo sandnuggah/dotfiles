@@ -16,11 +16,15 @@ symbol = "pkg "
 disabled = true
 
 [nodejs]
-symbol = "N "
+symbol = "no "
 disabled = true
 
 [python]
-symbol = "P "
+symbol = "Py "
+disabled = true
+
+[rust]
+symbol = "R "
 disabled = true
 
 [git_status]
