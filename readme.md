@@ -1,6 +1,8 @@
-# dotfiles
+<div style="text-align:center">
+    <img src="hacker.png" height="150px" alt="Leet haxx0r" />
+</div>
 
-![alt text](hacker.png "leet haxx0r")
+# dotfiles
 
 [![Anarchism](https://img.shields.io/badge/anarchism-Ⓐ-000000.svg)](https://en.wikipedia.org/wiki/Anarchism)
 [![Socialism](https://img.shields.io/badge/socialism-★-ff0000.svg)](https://en.wikipedia.org/wiki/Socialism)
