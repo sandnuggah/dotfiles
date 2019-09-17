@@ -1,6 +1,6 @@
-<div style="text-align:center">
-    <img src="hacker.png" height="150px" alt="Leet haxx0r" />
-</div>
+<p align="center">
+    <img src="hacker.png" height="250px" alt="Leet haxx0r" />
+</p>
 
 # dotfiles
 
