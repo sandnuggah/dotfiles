@@ -17,11 +17,11 @@ if ! command -v brew >/dev/null; then
 fi
 
 brew bundle --file=- <<EOF
-  tap 'homebrew/core'
-  tap 'homebrew/bundle'
-  tap 'caskroom/fonts'
-  tap 'caskroom/versions'
   tap 'caskroom/cask'
+  tap 'caskroom/versions'
+  tap 'homebrew/bundle'
+  tap 'homebrew/cask-fonts'
+  tap 'homebrew/core'
   
   brew 'bat'
   brew 'cmatrix'
