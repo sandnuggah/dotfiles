@@ -36,6 +36,7 @@ abbr -a dc 'docker-compose'
 abbr -a gs 'git status'
 abbr -a gd 'git diff'
 abbr -a gl 'git log'
+abbr -a gc 'git checkout'
 abbr -a brewup 'brew update; and brew upgrade; and brew cask upgrade; and brew cleanup;'
 
 # Load direnv
