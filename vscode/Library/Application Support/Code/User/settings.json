@@ -1,0 +1,48 @@
+{
+  "workbench.iconTheme": "file-icons",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.colorTheme": "Base16 Dark Ocean",
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.renderIndentGuides": false,
+  "editor.renderLineHighlight": "none",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.folding": false,
+  "editor.occurrencesHighlight": false,
+  "editor.matchBrackets": false,
+  "editor.glyphMargin": false,
+  "explorer.openEditors.visible": 0,
+  "workbench.activityBar.visible": false,
+  "workbench.editor.showIcons": false,
+  "workbench.editor.tabCloseButton": "off",
+  "indenticator.color.dark": "rgba(255,255,255,.1)",
+  "workbench.colorCustomizations": {
+    "tab.activeBorder": "#0000"
+  },
+  "platformio-ide.activateOnlyOnPlatformIOProject": true,
+  "breadcrumbs.enabled": true,
+  "editor.renderControlCharacters": false,
+  "prettier.jsxBracketSameLine": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.autofetch": true,
+  "gitlens.currentLine.enabled": false,
+  "window.zoomLevel": 0,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "black",
+  "C_Cpp.updateChannel": "Insiders",
+  "gitlens.codeLens.enabled": false,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "workbench.sideBar.location": "right",
+  "diffEditor.renderSideBySide": true,
+  "workbench.statusBar.visible": false
+}
