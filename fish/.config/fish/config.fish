@@ -1,4 +1,3 @@
-# Install fundle
 if not functions -q fundle; eval (curl -sfL https://git.io/fundle-install); end
 
 fundle plugin 'tuvistavie/fish-kubectl'
@@ -6,7 +5,6 @@ fundle plugin 'tuvistavie/fish-fastdir'
 fundle plugin 'barnybug-archive/docker-fish-completion'
 fundle init
 
-# Paths
 set -x PATH /bin $PATH
 set -x PATH /sbin $PATH
 set -x PATH /usr/bin $PATH
@@ -14,21 +12,15 @@ set -x PATH /usr/sbin $PATH
 set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
 
-# env
 set -x EDITOR code
 set -x BAT_THEME 'GitHub'
 set -x BAT_STYLE 'plain'
 set -x GIT_PAGER 'bat'
 set -x MANPAGER "sh -c 'col -b | bat -l man -p'"
 
-# Secrets (like GITHUB_API_TOKEN)
-source ~/.config/fish/secrets.fish
-
-# Aliases
 alias ls 'exa'
 alias tmux 'env TERM=xterm-256color tmux'
 
-# Abbreviations
 abbr -a l 'ls'
 abbr -a ll 'ls -l'
 abbr -a la 'ls -la'
@@ -39,7 +31,10 @@ abbr -a gl 'git log'
 abbr -a gc 'git checkout'
 abbr -a brewup 'brew update; and brew upgrade; and brew cask upgrade; and brew cleanup;'
 
-# Load direnv
+# Secrets (like GITHUB_API_TOKEN)
+source ~/.config/fish/secrets.fish
+
+# direnv
 eval (direnv hook fish)
 
 # nodenv
