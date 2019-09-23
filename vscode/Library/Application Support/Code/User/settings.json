@@ -1,7 +1,7 @@
 {
   "workbench.iconTheme": "file-icons",
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.colorTheme": "Base16 Dark Ocean",
+  "workbench.colorTheme": "Spacemacs - dark",
   "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
@@ -16,7 +16,7 @@
   "editor.matchBrackets": false,
   "editor.glyphMargin": false,
   "explorer.openEditors.visible": 0,
-  "workbench.activityBar.visible": false,
+  "workbench.activityBar.visible": true,
   "workbench.editor.showIcons": false,
   "workbench.editor.tabCloseButton": "off",
   "indenticator.color.dark": "rgba(255,255,255,.1)",
@@ -31,7 +31,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "git.autofetch": true,
-  "gitlens.currentLine.enabled": false,
   "window.zoomLevel": 0,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
