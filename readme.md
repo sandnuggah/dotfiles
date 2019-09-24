@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="hacker.png" height="250px" alt="Leet haxx0r" />
+    <img src="computer.png" height="182px" alt="90's computer graphics" />
 </p>
 
 # dotfiles
