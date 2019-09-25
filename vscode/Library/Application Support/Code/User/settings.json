@@ -50,5 +50,6 @@
   "gitlens.currentLine.enabled": false,
   "gitlens.mode.active": "zen",
   "rust-client.rustupPath": "/Users/adam/.cargo/bin/rustup",
-  "rust-client.updateOnStartup": true
+  "rust-client.updateOnStartup": true,
+  "git.confirmSync": false
 }
