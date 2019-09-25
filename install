@@ -30,7 +30,6 @@ brew bundle --file=- <<EOF
   brew 'curl'
   brew 'direnv'
   brew 'fd'
-  brew 'findutils'
   brew 'fish'
   brew 'git-flow'
   brew 'git'
