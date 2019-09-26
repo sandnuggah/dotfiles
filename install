@@ -31,7 +31,6 @@ brew bundle --file=- <<EOF
   brew 'direnv'
   brew 'fd'
   brew 'fish'
-  brew 'git-flow'
   brew 'git'
   brew 'htop'
   brew 'httpie'
