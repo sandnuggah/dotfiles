@@ -10,11 +10,10 @@
   "editor.renderIndentGuides": false,
   "editor.renderLineHighlight": "none",
   "editor.overviewRulerBorder": false,
-  "editor.hideCursorInOverviewRuler": true,
   "editor.folding": false,
   "editor.occurrencesHighlight": false,
   "editor.matchBrackets": false,
-  "editor.glyphMargin": false,
+  "editor.glyphMargin": true,
   "explorer.openEditors.visible": 0,
   "workbench.activityBar.visible": true,
   "workbench.editor.showIcons": false,
@@ -23,7 +22,6 @@
   "workbench.colorCustomizations": {
     "tab.activeBorder": "#0000"
   },
-  "platformio-ide.activateOnlyOnPlatformIOProject": true,
   "breadcrumbs.enabled": false,
   "editor.renderControlCharacters": false,
   "prettier.jsxBracketSameLine": true,
@@ -48,8 +46,16 @@
   "gitlens.codeLens.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
   "gitlens.currentLine.enabled": false,
-  "gitlens.mode.active": "zen",
   "rust-client.rustupPath": "/Users/adam/.cargo/bin/rustup",
   "rust-client.updateOnStartup": true,
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "debug.inlineValues": true,
+  "debug.toolBarLocation": "docked",
+  "terminal.integrated.drawBoldTextInBrightColors": false,
+  "telemetry.enableTelemetry": false,
+  "platformio-ide.activateOnlyOnPlatformIOProject": true,
+  "editor.hideCursorInOverviewRuler": true
 }
