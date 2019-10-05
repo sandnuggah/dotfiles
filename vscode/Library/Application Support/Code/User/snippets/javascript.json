@@ -9,35 +9,35 @@
 		"body": [
 			"console.log($1)"
 		],
-		"description": "Log output to console"
+		"description": "Log output to console log"
 	},
 	"Print to console.warn": {
 		"prefix": "cw",
 		"body": [
 			"console.warn($1)"
 		],
-		"description": "Log output to console"
+		"description": "Log output to console warn"
 	},
 	"Print to console.error": {
 		"prefix": "ce",
 		"body": [
 			"console.error($1)"
 		],
-		"description": "Log output to console"
+		"description": "Log output to console error"
 	},
 	"Print to console.table": {
 		"prefix": "ct",
 		"body": [
 			"console.table($1)"
 		],
-		"description": "Log output to console"
+		"description": "Log output to console table"
 	},
 	"Group console statements": {
 		"prefix": "cg",
 		"body": [
 			"console.group($1)",
-			"console.groupEnd($1)"
+			"console.groupEnd()"
 		],
-		"description": "Log output to console"
+		"description": "Group console statements"
 	}
 }
