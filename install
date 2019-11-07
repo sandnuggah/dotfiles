@@ -74,11 +74,14 @@ EOF
 
 # Install VSCode extensions
 if ! command -v code >/dev/null; then
-cat <<EOF | grep -v '^#' | xargs -L1 code --install-extension
-  2gua.rainbow-brackets
-  SirTori.indenticator
+  cat <<EOF | grep -v '^#' | xargs -L1 code --install-extension
   bungcip.better-toml
+  christian-kohler.path-intellisense
+  chunsen.bracket-select
+  clinyong.vscode-css-modules
+  CoenraadS.bracket-pair-colorizer-2
   cometeer.spacemacs
+  dbaeumer.vscode-eslint
   eamodio.gitlens
   esbenp.prettier-vscode
   file-icons.file-icons
@@ -86,15 +89,19 @@ cat <<EOF | grep -v '^#' | xargs -L1 code --install-extension
   LaurentTreguier.vscode-simple-icons
   lmcarreiro.vscode-smart-column-indenter
   mrmlnc.vscode-postcss-sorting
+  ms-azuretools.vscode-docker
   ms-python.python
+  ms-vscode-remote.remote-containers
   ms-vscode.cpptools
-  oderwat.indent-rainbow
+  msjsdiag.debugger-for-chrome
   OnlyLys.leaper
+  platformio.platformio-ide
   pustelto.bracketeer
-  rafamel.subtle-brackets
   rust-lang.rust
   skyapps.fish-vscode
+  slevesque.vscode-hexdump
   Tyriar.sort-lines
+  vsciot-vscode.vscode-arduino
   webfreak.debug
 EOF
 fi
