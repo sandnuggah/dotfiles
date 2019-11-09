@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="computer.png" height="182px" alt="90's computer graphics" />
+    <img src="install.jpg" alt="Installing software on to a human mainframe" />
 </p>
 
 # dotfiles
