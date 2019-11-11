@@ -1,11 +1,9 @@
 {
   "workbench.iconTheme": "file-icons",
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.colorTheme": "Spacemacs - light",
   "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
-  "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
   "editor.renderIndentGuides": false,
   "editor.renderLineHighlight": "none",
@@ -37,6 +35,7 @@
   "editor.formatOnSave": true,
   "python.formatting.provider": "black",
   "C_Cpp.updateChannel": "Insiders",
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
   "diffEditor.ignoreTrimWhitespace": true,
   "workbench.sideBar.location": "right",
   "diffEditor.renderSideBySide": true,
@@ -52,10 +51,39 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "debug.inlineValues": true,
   "debug.toolBarLocation": "docked",
   "terminal.integrated.drawBoldTextInBrightColors": false,
   "telemetry.enableTelemetry": false,
   "platformio-ide.activateOnlyOnPlatformIOProject": true,
-  "editor.hideCursorInOverviewRuler": true
+  "editor.hideCursorInOverviewRuler": true,
+  "bracket-pair-colorizer-2.colors": [
+    "Orchid",
+    "HotPink",
+    "Purple",
+    "Salmon",
+  ],
+  "editor.scrollBeyondLastLine": false,
+  "C_Cpp.default.cppStandard": "c++11",
+  "flow.enabled": false,
+  "autoDarkMode.darkTheme": "Spacemacs - dark",
+  "autoDarkMode.lightTheme": "Spacemacs - light",
+  "workbench.colorTheme": "Horizon Bold",
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[toml]": {},
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "auto-close-tag.enableAutoCloseSelfClosingTag": false,
+  "editor.formatOnPaste": true,
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "relative",
+  "python.jediEnabled": false,
+  "python.analysis.disabled": [
+    "unresolved-import",
+    "undefined-variable",
+  ],
 }
