@@ -36,6 +36,9 @@ abbr -a brewup 'brew update; and brew upgrade; and brew cask upgrade; and brew c
 # Secrets (like GITHUB_API_TOKEN)
 source ~/.config/fish/secrets.fish
 
+# completions
+kitty + complete setup fish | source
+
 # direnv
 eval (direnv hook fish)
 
