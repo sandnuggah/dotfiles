@@ -14,5 +14,5 @@ $ git submodule init
 $ git submodule update
 $ sh install
 # ...will install for a few minutes. Later, `stow` the packages you're interested in
-$ stow docker fish git kitty starship tmux vscode
+$ stow docker fish git kitty starship vscode
 ```
