@@ -1,7 +1,3 @@
-<p align="center">
-    <img src="install.jpg" alt="Installing software on to a human mainframe" />
-</p>
-
 # dotfiles
 
 [![Anarchism](https://img.shields.io/badge/anarchism-Ⓐ-000000.svg)](https://en.wikipedia.org/wiki/Anarchism)
