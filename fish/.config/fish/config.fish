@@ -32,17 +32,18 @@ abbr -a gc 'git checkout'
 abbr -a gco 'git commit'
 abbr -a brewup 'brew update; and brew upgrade; and brew cask upgrade; and brew cleanup;'
 
-# Secrets (like GITHUB_API_TOKEN)
+# Local config and secrets
+source ~/.config/fish/local.fish
 source ~/.config/fish/secrets.fish
 
-# completions
+# Completions
 kitty + complete setup fish | source
 
-# direnv
+# Direnv
 eval (direnv hook fish)
 
-# nodenv
+# Nodenv
 status --is-interactive; and source (nodenv init -|psub)
 
-# starship
+# Starship
 eval (starship init fish)
