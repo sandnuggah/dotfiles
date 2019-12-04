@@ -20,7 +20,6 @@ set -x MANPAGER "sh -c 'col -b | bat -l man -p'"
 set -x HOMEBREW_NO_EMOJI 1
 
 alias ls 'exa'
-alias tmux 'env TERM=xterm-256color tmux'
 
 abbr -a l 'ls'
 abbr -a ll 'ls -l'

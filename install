@@ -46,7 +46,6 @@ brew bundle --file=- <<EOF
   brew 'ssh-copy-id'
   brew 'starship'
   brew 'stow'
-  brew 'tmux'
   brew 'wget'
 
   cask 'alfred'
