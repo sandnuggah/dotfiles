@@ -64,8 +64,6 @@
   "editor.scrollBeyondLastLine": false,
   "C_Cpp.default.cppStandard": "c++11",
   "flow.enabled": false,
-  "autoDarkMode.darkTheme": "Spacemacs - dark",
-  "autoDarkMode.lightTheme": "Spacemacs - light",
   "workbench.colorTheme": "Material Theme Palenight High Contrast",
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
