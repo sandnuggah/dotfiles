@@ -22,7 +22,6 @@
   },
   "breadcrumbs.enabled": false,
   "editor.renderControlCharacters": false,
-  "prettier.jsxBracketSameLine": true,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -67,13 +66,16 @@
   "flow.enabled": false,
   "autoDarkMode.darkTheme": "Spacemacs - dark",
   "autoDarkMode.lightTheme": "Spacemacs - light",
-  "workbench.colorTheme": "Horizon Bold",
+  "workbench.colorTheme": "Material Theme Palenight High Contrast",
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   "[toml]": {},
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[python]": {
+    "editor.formatOnPaste": false
   },
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -86,4 +88,6 @@
     "unresolved-import",
     "undefined-variable",
   ],
+  "python.pipenvPath": "/usr/local/bin/pipenv",
+  "bookmarks.navigateThroughAllFiles": true,
 }
