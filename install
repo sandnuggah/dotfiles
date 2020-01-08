@@ -86,6 +86,7 @@ if ! command -v code >/dev/null; then
   cometeer.spacemacs
   dbaeumer.vscode-eslint
   eamodio.gitlens
+  equinusocio.vsc-material-theme
   esbenp.prettier-vscode
   file-icons.file-icons
   flowtype.flow-for-vscode
@@ -98,13 +99,11 @@ if ! command -v code >/dev/null; then
   ms-vscode.cpptools
   msjsdiag.debugger-for-chrome
   OnlyLys.leaper
-  platformio.platformio-ide
   pustelto.bracketeer
   rust-lang.rust
   skyapps.fish-vscode
   slevesque.vscode-hexdump
   Tyriar.sort-lines
-  vsciot-vscode.vscode-arduino
   webfreak.debug
 EOF
 fi
