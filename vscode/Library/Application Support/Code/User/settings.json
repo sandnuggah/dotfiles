@@ -1,5 +1,4 @@
 {
-  "workbench.iconTheme": "file-icons",
   "workbench.startupEditor": "newUntitledFile",
   "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 14,
@@ -10,7 +9,7 @@
   "editor.overviewRulerBorder": false,
   "editor.folding": false,
   "editor.occurrencesHighlight": false,
-  "editor.matchBrackets": false,
+  "editor.matchBrackets": "never",
   "editor.glyphMargin": true,
   "explorer.openEditors.visible": 0,
   "workbench.activityBar.visible": true,
@@ -20,7 +19,7 @@
   "workbench.colorCustomizations": {
     "tab.activeBorder": "#0000"
   },
-  "breadcrumbs.enabled": false,
+  "breadcrumbs.enabled": true,
   "editor.renderControlCharacters": false,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -53,7 +52,6 @@
   "debug.toolBarLocation": "docked",
   "terminal.integrated.drawBoldTextInBrightColors": false,
   "telemetry.enableTelemetry": false,
-  "platformio-ide.activateOnlyOnPlatformIOProject": true,
   "editor.hideCursorInOverviewRuler": true,
   "bracket-pair-colorizer-2.colors": [
     "Orchid",
@@ -78,7 +76,6 @@
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "auto-close-tag.enableAutoCloseSelfClosingTag": false,
-  "editor.formatOnPaste": true,
   "editor.minimap.enabled": false,
   "editor.lineNumbers": "relative",
   "python.jediEnabled": false,
@@ -88,4 +85,14 @@
   ],
   "python.pipenvPath": "/usr/local/bin/pipenv",
   "bookmarks.navigateThroughAllFiles": true,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "editor.tabSize": 2,
+  "typescript.validate.enable": false,
+  "explorer.confirmDragAndDrop": false,
+  "javascript.validate.enable": false,
+  "arduino.additionalUrls": [
+    "http://arduino.esp8266.com/stable/package_esp8266com_index.json"
+  ],
+  "python.pythonPath": "/usr/local/opt/python/bin/python3.7"
 }
