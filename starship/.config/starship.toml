@@ -27,9 +27,16 @@ disabled = true
 symbol = "R "
 disabled = true
 
+[golang]
+symbol = "go "
+disabled = true
+
 [git_status]
 deleted = "x"
 
 [jobs]
 symbol = "+ "
 threshold = 0
+
+[terraform]
+symbol = "Tf "
