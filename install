@@ -63,6 +63,7 @@ brew bundle --file=- <<EOF
   cask 'signal'
   cask 'the-unarchiver'
   cask 'transmission'
+  cask 'viscosity'
   cask 'webpquicklook'
 
   mas '1Blocker', id: 1107421413
