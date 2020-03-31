@@ -22,8 +22,6 @@ fi
 
 # Bundle applications
 brew bundle --file=- <<EOF
-  tap 'caskroom/cask'
-  tap 'caskroom/versions'
   tap 'homebrew/bundle'
   tap 'homebrew/cask-fonts'
   tap 'homebrew/core'
@@ -49,7 +47,7 @@ brew bundle --file=- <<EOF
   brew 'wget'
 
   cask 'alfred'
-  cask 'caskroom/fonts/font-fira-code'
+  cask 'font-fira-code'
   cask 'docker'
   cask 'google-chrome'
   cask 'iina'
