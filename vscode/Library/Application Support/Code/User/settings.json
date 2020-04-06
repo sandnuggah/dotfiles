@@ -94,5 +94,6 @@
   "arduino.additionalUrls": [
     "http://arduino.esp8266.com/stable/package_esp8266com_index.json"
   ],
-  "python.pythonPath": "/usr/local/opt/python/bin/python3.7"
+  "python.pythonPath": "/usr/local/opt/python/bin/python3.7",
+  "workbench.iconTheme": "file-icons",
 }
