@@ -60,6 +60,7 @@ brew bundle --file=- <<EOF
   cask 'qlvideo'
   cask 'quicklook-csv'
   cask 'quicklook-json'
+  cask 'sensiblesidebuttons'
   cask 'signal'
   cask 'the-unarchiver'
   cask 'transmission'
