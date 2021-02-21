@@ -18,3 +18,7 @@
 	branch = false
 [push]
 	default = current
+[pull]
+	rebase = false
+[fetch]
+	prune = true
