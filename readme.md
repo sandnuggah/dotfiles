@@ -4,7 +4,7 @@
 [![Socialism](https://img.shields.io/badge/socialism-★-ff0000.svg)](https://en.wikipedia.org/wiki/Socialism)
 ![Ideology passing](https://img.shields.io/badge/ideology-passing-brightgreen.svg)
 
-Simple macOS Catalina dotfiles using [stow](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html).
+Simple macOS Big Sur dotfiles using [stow](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html).
 
 ## Installation
 
