@@ -78,39 +78,6 @@ brew bundle --file=- <<EOF
   mas 'Xee³', id: 639764244
 EOF
 
-# Install VSCode extensions
-if ! command -v code >/dev/null; then
-  cat <<EOF | grep -v '^#' | xargs -L1 code --install-extension
-  bungcip.better-toml
-  christian-kohler.path-intellisense
-  chunsen.bracket-select
-  clinyong.vscode-css-modules
-  CoenraadS.bracket-pair-colorizer-2
-  cometeer.spacemacs
-  dbaeumer.vscode-eslint
-  eamodio.gitlens
-  equinusocio.vsc-material-theme
-  esbenp.prettier-vscode
-  file-icons.file-icons
-  flowtype.flow-for-vscode
-  LaurentTreguier.vscode-simple-icons
-  lmcarreiro.vscode-smart-column-indenter
-  mrmlnc.vscode-postcss-sorting
-  ms-azuretools.vscode-docker
-  ms-python.python
-  ms-vscode-remote.remote-containers
-  ms-vscode.cpptools
-  msjsdiag.debugger-for-chrome
-  OnlyLys.leaper
-  pustelto.bracketeer
-  rust-lang.rust
-  skyapps.fish-vscode
-  slevesque.vscode-hexdump
-  Tyriar.sort-lines
-  webfreak.debug
-EOF
-fi
-
 # Add fish to shells
 if ! fgrep -q '/usr/local/bin/fish' /etc/shells; then
   echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
