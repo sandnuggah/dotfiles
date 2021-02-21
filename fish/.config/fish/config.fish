@@ -31,7 +31,7 @@ abbr -a gl 'git log'
 abbr -a gc 'git checkout'
 abbr -a gb 'git branch'
 abbr -a gco 'git commit'
-abbr -a brewup 'brew update; and brew upgrade; and brew cask upgrade; and brew cleanup;'
+abbr -a brewup 'brew update; and brew upgrade; and brew upgrade --cask; and brew cleanup;'
 
 # Local config and secrets
 source ~/.config/fish/local.fish
