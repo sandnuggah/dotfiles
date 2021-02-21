@@ -1,9 +1,8 @@
 add_newline = false
 
 [character]
-symbol = "λ ->"
-error_symbol = "λ ~>"
-use_symbol_for_status = true
+success_symbol = "[λ](green)"
+error_symbol = "[λ](red)"
 
 [directory]
 fish_style_pwd_dir_length = 3
@@ -40,3 +39,6 @@ threshold = 0
 
 [terraform]
 symbol = "Tf "
+
+[gcloud]
+disabled = true
