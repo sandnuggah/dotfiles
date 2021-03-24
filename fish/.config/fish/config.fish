@@ -14,7 +14,7 @@ set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
 
 set -x EDITOR code
-set -x BAT_THEME 'ansi-dark'
+set -x BAT_THEME 'ansi'
 set -x BAT_STYLE 'plain'
 set -x GIT_PAGER 'bat'
 set -x MANPAGER "sh -c 'col -b | bat -l man -p'"
