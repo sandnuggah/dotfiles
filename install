@@ -49,6 +49,7 @@ brew bundle --file=- <<EOF
   brew 'wget'
 
   cask 'alfred'
+  cask 'alt-tab'
   cask 'font-fira-code'
   cask 'docker'
   cask 'google-chrome'
