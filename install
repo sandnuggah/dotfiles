@@ -5,19 +5,19 @@ sudo -v
 
 # Update existing `sudo` time stamp until `install` has finished
 while true; do
-  sudo -n true
-  sleep 60
-  kill -0 "$$" || exit
+	sudo -n true
+	sleep 60
+	kill -0 "$$" || exit
 done 2>/dev/null &
 
 # Install Xcode command line tools
 if ! command -v xcode-select -p >/dev/null; then
-  xcode-select --install
+	xcode-select --install
 fi
 
 # Install homebrew
 if ! command -v brew >/dev/null; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 # Bundle applications
@@ -81,12 +81,12 @@ EOF
 
 # Add fish to shells
 if ! fgrep -q '/usr/local/bin/fish' /etc/shells; then
-  echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
+	echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
 fi
 
 # Set fish as the default shell
 if [[ ! $SHELL == '/usr/local/bin/fish' ]]; then
-  chsh -s /usr/local/bin/fish
+	chsh -s /usr/local/bin/fish
 fi
 
 echo 'Install complete! Please restart your terminal.'
