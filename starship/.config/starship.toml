@@ -1,4 +1,5 @@
 add_newline = false
+command_timeout = 1000
 
 [character]
 success_symbol = "[λ](green)"
@@ -35,7 +36,7 @@ deleted = "x"
 
 [jobs]
 symbol = "+ "
-threshold = 0
+number_threshold = 0
 
 [terraform]
 symbol = "Tf "
