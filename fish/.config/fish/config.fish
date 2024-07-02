@@ -50,8 +50,8 @@ kitty + complete setup fish | source
 # Direnv
 eval (direnv hook fish)
 
-# Nodenv
-status --is-interactive; and source (nodenv init -|psub)
-
 # Starship
 eval (starship init fish)
+
+# asdf
+source /usr/local/opt/asdf/libexec/asdf.fish
