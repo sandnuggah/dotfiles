@@ -26,6 +26,7 @@ brew bundle --file=- <<EOF
   tap 'homebrew/cask-fonts'
   tap 'homebrew/core'
   
+  brew 'asdf'
   brew 'bat'
   brew 'cmatrix'
   brew 'coreutils'
