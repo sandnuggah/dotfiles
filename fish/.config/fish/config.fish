@@ -6,12 +6,18 @@ fundle plugin 'barnybug-archive/docker-fish-completion'
 fundle plugin 'decors/fish-docker-machine'
 fundle init
 
-set -x PATH /bin $PATH
-set -x PATH /sbin $PATH
-set -x PATH /usr/bin $PATH
-set -x PATH /usr/sbin $PATH
-set -x PATH /usr/local/bin $PATH
-set -x PATH /usr/local/sbin $PATH
+set -Up fish_user_paths /bin
+set -Up fish_user_paths /sbin
+set -Up fish_user_paths /usr/bin
+set -Up fish_user_paths /usr/sbin
+set -Up fish_user_paths /usr/local/bin
+set -Up fish_user_paths /usr/local/sbin
+set -Up fish_user_paths ~/.cargo/bin
+set -Up fish_user_paths ~/.flutter/bin
+set -Up fish_user_paths ~/Library/Android/sdk/tools/bin
+set -Up fish_user_paths ~/Library/Android/sdk/platform-tools
+set -Up fish_user_paths /usr/local/go/bin
+set -Up fish_user_paths ~/.pub-cache/bin
 
 set -x EDITOR code
 set -x BAT_THEME 'ansi'
