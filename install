@@ -89,4 +89,4 @@ if [[ ! $SHELL == '/usr/local/bin/fish' ]]; then
   chsh -s /usr/local/bin/fish
 fi
 
-echo 'Install complete'
+echo 'Install complete! Please restart your terminal.'
