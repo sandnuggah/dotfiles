@@ -43,3 +43,6 @@ symbol = "Tf "
 
 [gcloud]
 disabled = true
+
+[conda]
+symbol = "conda "
