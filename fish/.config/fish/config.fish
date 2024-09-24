@@ -12,6 +12,7 @@ set -Up fish_user_paths /usr/bin
 set -Up fish_user_paths /usr/sbin
 set -Up fish_user_paths /usr/local/bin
 set -Up fish_user_paths /usr/local/sbin
+set -Up fish_user_paths /opt/homebrew/bin
 set -Up fish_user_paths ~/.cargo/bin
 set -Up fish_user_paths ~/.flutter/bin
 set -Up fish_user_paths ~/Library/Android/sdk/tools/bin
