@@ -5,26 +5,24 @@ sudo -v
 
 # Update existing `sudo` time stamp until `install` has finished
 while true; do
-	sudo -n true
-	sleep 60
-	kill -0 "$$" || exit
+  sudo -n true
+  sleep 60
+  kill -0 "$$" || exit
 done 2>/dev/null &
 
 # Install Xcode command line tools
 if ! command -v xcode-select -p >/dev/null; then
-	xcode-select --install
+  xcode-select --install
 fi
 
 # Install homebrew
 if ! command -v brew >/dev/null; then
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" || true
 fi
 
 # Bundle applications
 brew bundle --file=- <<EOF
   tap 'homebrew/bundle'
-  tap 'homebrew/cask-fonts'
-  tap 'homebrew/core'
   
   brew 'asdf'
   brew 'bat'
@@ -40,7 +38,6 @@ brew bundle --file=- <<EOF
   brew 'httpie'
   brew 'mas'
   brew 'openssl'
-  brew 'reattach-to-user-namespace'
   brew 'sl'
   brew 'ssh-copy-id'
   brew 'starship'
@@ -65,28 +62,24 @@ brew bundle --file=- <<EOF
   cask 'signal'
   cask 'the-unarchiver'
   cask 'transmission'
-  cask 'viscosity'
   cask 'visual-studio-code'
   cask 'webpquicklook'
 
-  mas '1Blocker', id: 1107421413
   mas 'Pixelmator', id: 407963104
-  mas 'Radium', id: 597611879
   mas 'Textual IRC Client', id: 896450579
   mas 'ToothFairy', id: 1191449274
   mas 'Transmit', id: 403388562
   mas 'Xcode', id: 497799835
-  mas 'Xee³', id: 639764244
 EOF
 
 # Add fish to shells
-if ! fgrep -q '/usr/local/bin/fish' /etc/shells; then
-	echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
+if ! grep -F -q '/opt/homebrew/bin/fish' /etc/shells; then
+  echo '/opt/homebrew/bin/fish' | sudo tee -a /etc/shells
 fi
 
 # Set fish as the default shell
-if [[ ! $SHELL == '/usr/local/bin/fish' ]]; then
-	chsh -s /usr/local/bin/fish
+if [ ! "${SHELL}" = '/opt/homebrew/bin/fish' ]; then
+  chsh -s /opt/homebrew/bin/fish
 fi
 
 echo 'Install complete! Please restart your terminal.'
