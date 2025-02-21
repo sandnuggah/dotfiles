@@ -52,7 +52,6 @@ brew bundle --file=- <<EOF
   cask 'ghostty'
   cask 'google-chrome'
   cask 'iina'
-  cask 'kitty'
   cask 'orbstack'
   cask 'orion'
   cask 'qlcolorcode'
