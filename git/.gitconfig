@@ -1,11 +1,10 @@
 [user]
 	name = 0x4d
-	email = 0x4d@undefined
 [credential]
 	helper = osxkeychain
 [core]
 	excludesfile = /Users/adam/.gitignore_global
-	editor = nano
+	editor = code --wait
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
