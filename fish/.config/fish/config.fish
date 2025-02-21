@@ -45,9 +45,6 @@ abbr -a brewup 'brew update; and brew upgrade; and brew upgrade --cask; and brew
 source ~/.config/fish/local.fish
 source ~/.config/fish/secrets.fish
 
-# Completions
-kitty + complete setup fish | source
-
 # Direnv
 eval (direnv hook fish)
 
