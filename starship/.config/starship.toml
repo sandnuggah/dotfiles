@@ -12,7 +12,7 @@ symbol = "pkg "
 disabled = true
 
 [nodejs]
-symbol = "no "
+symbol = ".js "
 disabled = true
 
 [python]
