@@ -69,7 +69,6 @@ brew bundle --file=- <<EOF
 
   mas 'Pixelmator', id: 407963104
   mas 'Textual IRC Client', id: 896450579
-  mas 'ToothFairy', id: 1191449274
   mas 'Transmit', id: 403388562
   mas 'Xcode', id: 497799835
 EOF
