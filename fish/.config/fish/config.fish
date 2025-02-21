@@ -65,3 +65,4 @@ if not contains $_asdf_shims $PATH
 end
 set --erase _asdf_shims
 
+source ~/.orbstack/shell/init.fish 2>/dev/null || :
