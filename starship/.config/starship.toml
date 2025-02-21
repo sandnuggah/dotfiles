@@ -1,4 +1,3 @@
-add_newline = false
 command_timeout = 1000
 
 [character]
@@ -7,9 +6,6 @@ error_symbol = "[λ](red)"
 
 [directory]
 fish_style_pwd_dir_length = 3
-
-[line_break]
-disabled = true
 
 [package]
 symbol = "pkg "
@@ -37,9 +33,6 @@ deleted = "x"
 [jobs]
 symbol = "+ "
 number_threshold = 0
-
-[terraform]
-symbol = "Tf "
 
 [gcloud]
 disabled = true
