@@ -2,3 +2,5 @@
 .config/fish/functions/fundle.fish
 .config/fish/local.fish
 .config/fish/secrets.fish
+.config/fish/fundle
+.config/fish/fish_variables
