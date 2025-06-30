@@ -24,7 +24,6 @@ fi
 brew bundle --file=- <<EOF
   tap 'homebrew/bundle'
   
-  brew 'asdf'
   brew 'bat'
   brew 'cmatrix'
   brew 'coreutils'
@@ -37,6 +36,7 @@ brew bundle --file=- <<EOF
   brew 'htop'
   brew 'httpie'
   brew 'mas'
+  brew 'miso'
   brew 'openssl'
   brew 'sl'
   brew 'ssh-copy-id'
@@ -45,31 +45,18 @@ brew bundle --file=- <<EOF
   brew 'tree'
   brew 'wget'
 
-  cask 'alfred'
   cask 'alt-tab'
-  cask 'docker'
   cask 'font-fira-code'
   cask 'ghostty'
-  cask 'google-chrome'
   cask 'iina'
+  cask 'keka'
   cask 'orbstack'
   cask 'orion'
-  cask 'qlcolorcode'
-  cask 'qlmarkdown'
-  cask 'qlstephen'
-  cask 'qlvideo'
-  cask 'quicklook-csv'
-  cask 'quicklook-json'
   cask 'sensiblesidebuttons'
   cask 'signal'
-  cask 'the-unarchiver'
-  cask 'transmission'
-  cask 'visual-studio-code'
-  cask 'webpquicklook'
+  cask 'vscodium'
 
   mas 'Pixelmator', id: 407963104
-  mas 'Textual IRC Client', id: 896450579
-  mas 'Transmit', id: 403388562
   mas 'Xcode', id: 497799835
 EOF
 
