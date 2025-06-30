@@ -34,7 +34,7 @@ brew bundle --file=- <<EOF
   brew 'htop'
   brew 'httpie'
   brew 'mas'
-  brew 'miso'
+  brew 'mise'
   brew 'openssl'
   brew 'sl'
   brew 'ssh-copy-id'
