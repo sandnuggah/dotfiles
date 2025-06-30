@@ -22,8 +22,6 @@ fi
 
 # Bundle applications
 brew bundle --file=- <<EOF
-  tap 'homebrew/bundle'
-  
   brew 'bat'
   brew 'cmatrix'
   brew 'coreutils'
