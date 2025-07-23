@@ -1,11 +1,11 @@
 [user]
-	name = 0x4d
-	email = 0x4d@undefined
+	name = Adam Agnaou
+	email = adam@fapfap.se
 [credential]
 	helper = osxkeychain
 [core]
 	excludesfile = /Users/adam/.gitignore_global
-	editor = code --wait
+	editor = zed
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -29,3 +29,5 @@
 	required = true
 [init]
 	defaultBranch = main
+[color]
+	ui = true
