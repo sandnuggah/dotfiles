@@ -9,10 +9,8 @@ Simple macOS Tahoe dotfiles using [nix-darwin](https://github.com/nix-darwin/nix
 ## Installation
 
 ```sh
-$ git clone https://github.com/sandnuggah/dotfiles.git ~/.dotfiles && cd .dotfiles
-$ git submodule init
-$ git submodule update
-$ cd nix-darwin && make deploy
+$ git clone https://github.com/sandnuggah/dotfiles.git ~/.dotfiles && cd .dotfiles/nix-darwin
+$ make deploy
 # ...will install for a few minutes. Later, `stow` the packages you're interested in
-$ stow fish git starship
+$ cd .. && stow fish git starship
 ```
