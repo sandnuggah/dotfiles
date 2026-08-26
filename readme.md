@@ -10,8 +10,9 @@ macOS Tahoe configs using [nix-darwin](https://github.com/nix-darwin/nix-darwin)
 
 ```sh
 $ git clone https://github.com/sandnuggah/dotfiles.git ~/.dotfiles
-$ cd .dotfiles/nix-darwin
+$ cd ~/.dotfiles/nix-darwin
 $ make deploy
 # Will install for a few minutes... Later, `stow` the packages you're interested in
-$ cd .. && stow fish git starship
+$ cd ~/.dotfiles
+$ stow fish git starship
 ```
