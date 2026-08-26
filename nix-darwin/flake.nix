@@ -77,6 +77,7 @@
             "openscad@snapshot"
             "sensiblesidebuttons"
             "signal"
+            "ungoogled-chromium"
             "utm"
             "waterfox"
             "zed"
