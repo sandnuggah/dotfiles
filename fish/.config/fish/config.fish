@@ -36,10 +36,6 @@ abbr -a gc 'git checkout'
 abbr -a gb 'git branch'
 abbr -a gco 'git commit'
 
-# Local config and secrets
-source ~/.config/fish/local.fish
-source ~/.config/fish/secrets.fish
-
 # Direnv
 eval (direnv hook fish)
 
