@@ -13,14 +13,19 @@
     }:
     let
       configuration = { pkgs, ... }: {
+        nix.settings.experimental-features = "nix-command flakes";
+        nixpkgs.hostPlatform = "aarch64-darwin";
         # List packages installed in system profile. To search by name, run:
         # $ nix-env -qaP | grep wget
         environment.systemPackages = [
           pkgs.vim
         ];
-        nix.settings.experimental-features = "nix-command flakes";
-        nixpkgs.hostPlatform = "aarch64-darwin";
-        programs.fish.enable = true;
+        networking = {
+          hostName = "Baggio";
+        };
+        programs = {
+          fish.enable = true;
+        };
         system = {
           # Set Git commit hash for darwin-version.
           configurationRevision = self.rev or self.dirtyRev or null;
@@ -42,8 +47,12 @@
             universalaccess.reduceMotion = true;
           };
         };
-        security.pam.services.sudo_local.touchIdAuth = true;
-        environment.variables.HOMEBREW_NO_ANALYTICS = "1";
+        security = {
+          pam.services.sudo_local.touchIdAuth = true;
+        };
+        environment = {
+          variables.HOMEBREW_NO_ANALYTICS = "1";
+        };
         homebrew = {
           enable = true;
           onActivation = {
@@ -85,8 +94,10 @@
           masApps = {
             Consent-O-Matic = 1606897889;
             Finer = 6738301953;
+            linkding-For-Safari = 6763596375;
             Numbers = 361304891;
             Pages = 361309726;
+            RedirectWeb = 1571283503;
             Tailscale = 1475387142;
             wBlock = 6746388723;
             xSearch = 1579902068;
