@@ -92,9 +92,10 @@
             "zed"
           ];
           masApps = {
+            Amperfy-Music = 1530145038;
             Consent-O-Matic = 1606897889;
             Finer = 6738301953;
-            linkding-For-Safari = 6763596375;
+            linkding-for-Safari = 6763596375;
             Numbers = 361304891;
             Pages = 361309726;
             RedirectWeb = 1571283503;
