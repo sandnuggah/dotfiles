@@ -24,6 +24,7 @@ set -x HOMEBREW_NO_EMOJI 1
 set -x HOMEBREW_NO_ENV_HINTS 1
 
 alias ls 'eza'
+alias nix-deploy "make -C ~/.dotfiles/nix-darwin deploy"
 
 abbr -a l 'ls'
 abbr -a ll 'ls -l'
