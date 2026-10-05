@@ -130,6 +130,19 @@
       CustomUserPreferences = {
         NSGlobalDomain.WebAutomaticSpellingCorrectionEnabled = false;
         "com.apple.finder".ShowRecentTags = false;
+        # Hyperkey owns the caps lock remap, so don't use
+        # system.keyboard.remapCapsLockTo* alongside it.
+        "com.knollsoft.Hyperkey" = {
+          capsLockRemapped = 2;
+          executeQuickHyperKey = 1;
+          hideMenuBarIcon = true;
+          hyperFlags = 1966080; # cmd + ctrl + option + shift
+          keyRemap = 1;
+          launchOnLogin = true;
+          quickHyperKeycode = 0;
+          # Homebrew updates it (make upgrade).
+          SUEnableAutomaticChecks = false;
+        };
       };
     };
   };
