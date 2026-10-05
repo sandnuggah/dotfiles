@@ -36,8 +36,5 @@ abbr -a gc 'git checkout'
 abbr -a gb 'git branch'
 abbr -a gco 'git commit'
 
-# Direnv
-eval (direnv hook fish)
-
 # Starship
 eval (starship init fish)
