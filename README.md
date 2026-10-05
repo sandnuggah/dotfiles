@@ -10,8 +10,6 @@ macOS Tahoe configs using [nix-darwin](https://github.com/nix-darwin/nix-darwin)
 ## Installation
 
 ```sh
-$ curl -sSf -L https://install.lix.systems/lix | sh -s -- install #install lix
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 $ git clone https://github.com/sandnuggah/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
 $ make bootstrap
