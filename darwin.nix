@@ -130,7 +130,6 @@
     ];
 
     masApps = {
-      #Amperfy-Music = 1530145038;
       Consent-O-Matic = 1606897889;
       Finer = 6738301953;
       linkding-for-Safari = 6763596375;
@@ -139,7 +138,6 @@
       RedirectWeb = 1571283503;
       Tailscale = 1475387142;
       wBlock = 6746388723;
-      #xSearch = 1579902068;
     };
   };
 }
