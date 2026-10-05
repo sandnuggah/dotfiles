@@ -20,7 +20,7 @@ The config is for the machine `Baggio` (user `adam`, uid 501); change the hostna
 
 After the first install, run `nix-deploy` from any directory (or `make deploy` in the repo) to apply changes.
 
-To update nixpkgs, nix-darwin and home-manager, run `nix flake update` in `~/.dotfiles`, then `nix-deploy`. Deploys don't update Homebrew apps; run `make upgrade` for that.
+To update everything, run `nix-update` from any directory (or `make update` in the repo). It updates the flake inputs (nixpkgs, nix-darwin, home-manager), Homebrew and all its apps, including App Store apps, then deploys. Commit the changed `flake.lock` afterwards. Plain deploys don't update anything.
 
 `nix fmt` formats the `.nix` files.
 

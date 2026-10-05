@@ -73,6 +73,7 @@
       # (a cat function would also replace cat in scripts, breaking cat -e).
       cat = "bat";
       nix-deploy = "make -C ~/.dotfiles deploy";
+      nix-update = "make -C ~/.dotfiles update";
     };
 
     shellAbbrs = {

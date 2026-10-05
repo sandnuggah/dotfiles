@@ -40,6 +40,7 @@
       eza
       htop
       httpie
+      mas # App Store CLI, for `brew bundle upgrade` in make update
       ssh-copy-id
       vim
       # The Tailscale CLI from the App Store app, which keeps the CLI in step
@@ -140,7 +141,7 @@
           keyRemap = 1;
           launchOnLogin = true;
           quickHyperKeycode = 0;
-          # Homebrew updates it (make upgrade).
+          # Homebrew updates it (make update).
           SUEnableAutomaticChecks = false;
         };
       };
@@ -152,16 +153,21 @@
   homebrew = {
     enable = true;
 
-    # Deploys only install and remove apps; run `make upgrade` to update
-    # them. "uninstall" (unlike "zap") keeps an app's data when it's removed
-    # from the lists below, and also removes anything brew-installed by hand.
+    # Deploys only install and remove apps; `make update` updates them.
+    # "uninstall" (unlike "zap") keeps an app's data when it's removed from
+    # the lists below, and also removes anything brew-installed by hand.
     onActivation = {
       cleanup = "uninstall";
       extraEnv.HOMEBREW_NO_ANALYTICS = "1";
     };
 
-    # Points `brew bundle` at the generated Brewfile, for `make upgrade`.
+    # Points `brew bundle` at the generated Brewfile, for `make update`.
     global.brewfile = true;
+
+    # Let `make update` also upgrade casks that normally update themselves
+    # (Claude, Ghostty, Hyperkey, Keka, Signal, Waterfox, Zed); a plain
+    # upgrade skips them. Deploys don't upgrade, so this only affects updates.
+    greedyCasks = true;
 
     taps = [
       "chamburr/tap"
