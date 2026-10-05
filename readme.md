@@ -1,6 +1,6 @@
 # MacOS Configs
 
-macOS Tahoe configs using [nix-darwin](https://github.com/nix-darwin/nix-darwin) and [stow](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html).
+macOS Tahoe configs using [nix-darwin](https://github.com/nix-darwin/nix-darwin) and [home-manager](https://github.com/nix-community/home-manager).
 
 ## Prerequisites
 
@@ -10,9 +10,20 @@ macOS Tahoe configs using [nix-darwin](https://github.com/nix-darwin/nix-darwin)
 
 ```sh
 $ git clone https://github.com/sandnuggah/dotfiles.git ~/.dotfiles
-$ cd ~/.dotfiles/nix-darwin
-$ make deploy
-# Will install for a few minutes... Later, `stow` the packages you're interested in
 $ cd ~/.dotfiles
-$ stow fish git starship
+$ make deploy
 ```
+
+The config is for the machine `Baggio` (user `adam`, uid 501); change the hostname and user in `flake.nix` and `darwin.nix` for another Mac.
+
+## Usage
+
+After the first deploy, run `nix-deploy` from any directory to apply changes.
+
+To update nixpkgs, nix-darwin and home-manager, run `nix flake update` in `~/.dotfiles`, then `nix-deploy`. Homebrew apps update on every deploy.
+
+## Layout
+
+- `flake.nix`: inputs (nixpkgs, nix-darwin, home-manager) and how they fit together.
+- `darwin.nix`: the system, i.e. Nix settings, packages, users, macOS defaults and Homebrew apps.
+- `home.nix`: per-user config through home-manager (fish, git, starship, mise, Zed and Ghostty).
