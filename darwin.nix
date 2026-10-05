@@ -5,6 +5,11 @@
   nixpkgs.hostPlatform = "aarch64-darwin";
 
   nix = {
+    # Without this nix-darwin installs its default CppNix as the system nix
+    # and daemon. lixPackageSets.latest matches the Lix installer's version
+    # (pkgs.lix lags behind).
+    package = pkgs.lixPackageSets.latest.lix;
+
     settings.experimental-features = "nix-command flakes";
 
     # Weekly garbage collection (Sunday 03:00) and store deduplication.
@@ -33,20 +38,23 @@
       cmatrix
       coreutils-prefixed # g-prefixed (gls, gcat, ...), same as Homebrew's coreutils
       eza
-      git
       htop
       httpie
-      mise
       ssh-copy-id
-      starship
       vim
+      # The Tailscale CLI from the App Store app, which keeps the CLI in step
+      # with the app (pkgs.tailscale would run its own, older daemon).
+      (writeShellScriptBin "tailscale" ''
+        exec /Applications/Tailscale.app/Contents/MacOS/Tailscale "$@"
+      '')
     ];
 
-    variables.HOMEBREW_NO_ANALYTICS = "1";
+    # Adds fish to /etc/shells (programs.fish.enable alone doesn't).
+    shells = [ pkgs.fish ];
   };
 
   programs = {
-    # Installs fish from nixpkgs and adds it to /etc/shells.
+    # Installs fish from nixpkgs and sets up its system-wide config.
     fish.enable = true;
 
     # Installs direnv (with nix-direnv) and hooks it into fish.
@@ -88,14 +96,41 @@
         autohide = true;
         mru-spaces = false;
         orientation = "left";
+        show-recents = false;
         static-only = true;
         tilesize = 74;
+        # Bottom-right hot corner: off (1 = no action).
+        wvous-br-corner = 1;
       };
+      finder = {
+        FXPreferredViewStyle = "Nlsv"; # list view
+        ShowPathbar = true;
+      };
+      hitoolbox.AppleFnUsageType = "Do Nothing";
       loginwindow.GuestEnabled = false;
-      NSGlobalDomain.AppleScrollerPagingBehavior = true;
-      # Needs Full Disk Access for the terminal running darwin-rebuild.
+      NSGlobalDomain = {
+        AppleInterfaceStyle = "Dark";
+        AppleScrollerPagingBehavior = true;
+        InitialKeyRepeat = 25;
+        KeyRepeat = 2;
+        NSAutomaticSpellingCorrectionEnabled = false;
+        NSTableViewDefaultSizeMode = 3; # large sidebar icons
+        "com.apple.trackpad.scaling" = 3.0;
+      };
+      # Needs Full Disk Access for the terminal running darwin-rebuild;
+      # without it this write fails and aborts the rest of the switch.
       universalaccess.reduceMotion = true;
-      WindowManager.GloballyEnabled = true;
+      WindowManager = {
+        GloballyEnabled = true;
+        AppWindowGroupingBehavior = false; # show one window at a time
+        EnableStandardClickToShowDesktop = false; # only in Stage Manager
+        HideDesktop = true;
+        StageManagerHideWidgets = true;
+      };
+      CustomUserPreferences = {
+        NSGlobalDomain.WebAutomaticSpellingCorrectionEnabled = false;
+        "com.apple.finder".ShowRecentTags = false;
+      };
     };
   };
 
@@ -104,11 +139,16 @@
   homebrew = {
     enable = true;
 
+    # Deploys only install and remove apps; run `make upgrade` to update
+    # them. "uninstall" (unlike "zap") keeps an app's data when it's removed
+    # from the lists below, and also removes anything brew-installed by hand.
     onActivation = {
-      autoUpdate = true;
-      cleanup = "zap";
-      upgrade = true;
+      cleanup = "uninstall";
+      extraEnv.HOMEBREW_NO_ANALYTICS = "1";
     };
+
+    # Points `brew bundle` at the generated Brewfile, for `make upgrade`.
+    global.brewfile = true;
 
     taps = [
       "chamburr/tap"

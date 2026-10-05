@@ -6,10 +6,12 @@
   home.stateVersion = "26.05";
 
   home.sessionVariables = {
-    EDITOR = "zed";
+    # --wait makes zed block until the file is closed, as git and other
+    # tools expect from an editor.
+    EDITOR = "zed --wait";
+    VISUAL = "zed --wait";
     BAT_THEME = "ansi";
     BAT_STYLE = "plain";
-    GIT_PAGER = "bat";
     MANPAGER = "sh -c 'col -b | bat -l man -p'";
     HOMEBREW_NO_EMOJI = "1";
     HOMEBREW_NO_ENV_HINTS = "1";
@@ -25,8 +27,6 @@
     # cask CLIs (brew, zed, ...) now, so it goes last.
     shellInit = ''
       set -g fish_user_paths \
-        ~/Library/Android/sdk/tools/bin \
-        ~/Library/Android/sdk/platform-tools \
         ~/.local/bin \
         ~/.cargo/bin \
         ~/.nix-profile/bin \
@@ -69,6 +69,9 @@
 
     shellAliases = {
       ls = "eza";
+      # An alias, not a function, so it only applies in interactive shells
+      # (a cat function would also replace cat in scripts, breaking cat -e).
+      cat = "bat";
       nix-deploy = "make -C ~/.dotfiles deploy";
     };
 
@@ -87,12 +90,6 @@
     functions = {
       fish_greeting = "";
       fish_title = "";
-      # macOS 10.15 "Catalina" has *issues
-      __fish_describe_command = "";
-      cat = {
-        description = "cat with syntax highlight";
-        body = "bat $argv";
-      };
       c = {
         description = "expand ~/Code/";
         body = "cd $argv";
@@ -132,8 +129,7 @@
         name = "Adam Agnaou";
         email = "adam@fapfap.se";
       };
-      credential.helper = "osxkeychain";
-      core.editor = "zed";
+      core.editor = "zed --wait";
       pager.branch = false;
       push.default = "current";
       pull.rebase = false;
@@ -173,6 +169,22 @@
   programs.zed-editor = {
     enable = true;
     package = null;
+
+    # Installed by Zed on startup if missing (GitHub themes come from
+    # github-theme).
+    extensions = [
+      "fish"
+      "git-firefly"
+      "github-theme"
+      "html"
+      "log"
+      "macos-classic"
+      "make"
+      "nix"
+      "toml"
+      "xml"
+      "xy-zed"
+    ];
 
     userSettings = {
       proxy = "";
@@ -250,5 +262,13 @@
       shell-integration-features = "ssh-env";
       background-opacity = "0.75";
     };
+  };
+
+  # The private key itself stays out of the repo. enableDefaultConfig is off
+  # so the file holds only this, as before.
+  programs.ssh = {
+    enable = true;
+    enableDefaultConfig = false;
+    settings."*".IdentityFile = "~/.ssh/baggio";
   };
 }

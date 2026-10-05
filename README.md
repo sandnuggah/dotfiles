@@ -11,16 +11,18 @@ macOS Tahoe configs using [nix-darwin](https://github.com/nix-darwin/nix-darwin)
 ```sh
 $ git clone https://github.com/sandnuggah/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
-$ make deploy
+$ make bootstrap
 ```
 
 The config is for the machine `Baggio` (user `adam`, uid 501); change the hostname and user in `flake.nix` and `darwin.nix` for another Mac.
 
 ## Usage
 
-After the first deploy, run `nix-deploy` from any directory to apply changes.
+After the first install, run `nix-deploy` from any directory (or `make deploy` in the repo) to apply changes.
 
-To update nixpkgs, nix-darwin and home-manager, run `nix flake update` in `~/.dotfiles`, then `nix-deploy`. Homebrew apps update on every deploy.
+To update nixpkgs, nix-darwin and home-manager, run `nix flake update` in `~/.dotfiles`, then `nix-deploy`. Deploys don't update Homebrew apps; run `make upgrade` for that.
+
+`nix fmt` formats the `.nix` files.
 
 ## Layout
 
