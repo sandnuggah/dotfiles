@@ -265,10 +265,20 @@
   };
 
   # The private key itself stays out of the repo. enableDefaultConfig is off
-  # so the file holds only this, as before.
+  # so the file holds only what's set here.
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-    settings."*".IdentityFile = "~/.ssh/baggio";
+    settings."*" = {
+      IdentityFile = "~/.ssh/baggio";
+      # Apple's ssh reads the key's passphrase from the login keychain
+      # (stored once with `ssh-add --apple-use-keychain ~/.ssh/baggio`) and
+      # loads the key into the agent, so there's no passphrase prompt.
+      UseKeychain = "yes";
+      AddKeysToAgent = "yes";
+      # UseKeychain only exists in Apple's ssh; other builds would reject the
+      # whole file without this.
+      IgnoreUnknown = "UseKeychain";
+    };
   };
 }
