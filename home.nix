@@ -282,4 +282,15 @@
       IgnoreUnknown = "UseKeychain";
     };
   };
+
+  # Podman runs containers in a Linux VM ("machine"). Deploys create the
+  # machines declared here and delete any others, so the existing default
+  # machine is declared by name. It isn't auto-started: the module's
+  # watchdog would restart it within 30s of every stop. Start it with
+  # `podman machine start` when needed.
+  services.podman = {
+    enable = true;
+    useDefaultMachine = false;
+    machines.podman-machine-default.autoStart = false;
+  };
 }
